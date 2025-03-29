@@ -6,12 +6,15 @@ import { RouterLink, RouterView } from 'vue-router';
   <header>
     <Header></Header>
     <nav class="nav-links">
-      <RouterLink to="/" class="nav-link">Официант</RouterLink>
+      <RouterLink to="/" class="nav-link">Главная</RouterLink>
+      <RouterLink to="/waiter" class="nav-link">Обслуживание гостей</RouterLink>
       <RouterLink to="/kitchen" class="nav-link">Кухня</RouterLink>
+      <RouterLink to="/stat" class="nav-link">Статистика</RouterLink>
     </nav>
   </header>
 
   <RouterView />
+  <div class="footer">© 2025, Палитра вкуса. Все права защищены.</div>
 </template>
 
 <style scoped>
@@ -45,5 +48,19 @@ import { RouterLink, RouterView } from 'vue-router';
 .nav-link:hover {
   background-color: #a5f8be;
   color: rgb(0, 0, 0);
+}
+
+.footer {
+  height: 10vh;
+  background-color: #65e77b;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  color: black;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
 }
 </style>
