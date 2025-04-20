@@ -1,34 +1,21 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-
-const welcomeMessage = ref('Добро пожаловать в систему управления рестораном');
 </script>
 
 <template>
   <main class="main-container">
-    <div class="welcome-section">
-      <h1>{{ welcomeMessage }}</h1>
-      <p class="subtitle">Управляйте заказами и меню с легкостью</p>
-    </div>
-
     <div class="features-grid">
-      <div class="feature-card">
-        <div class="icon">🍽️</div>
-        <h3>Управление заказами</h3>
-        <p>Принимайте и обрабатывайте заказы от клиентов</p>
-      </div>
+      <div class="feature-card"><h1>Администратор</h1></div>
 
-      <div class="feature-card">
-        <div class="icon">👨‍🍳</div>
-        <h3>Кухня</h3>
-        <p>Отслеживайте и управляйте заказами на кухне</p>
-      </div>
+      <div class="feature-card"><h1>Менеджер</h1></div>
 
-      <div class="feature-card">
-        <div class="icon">📊</div>
-        <h3>Статистика</h3>
-        <p>Анализируйте работу ресторана</p>
-      </div>
+      <div class="feature-card"><h1>Официант</h1></div>
+
+      <div class="feature-card"><h1>Шеф-повар</h1></div>
+
+      <div class="feature-card"><h1>Повар</h1></div>
+
+      <div class="feature-card"><h1>Кладовщик</h1></div>
     </div>
   </main>
 </template>
@@ -37,7 +24,9 @@ const welcomeMessage = ref('Добро пожаловать в систему у
 .main-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .welcome-section {
@@ -58,16 +47,20 @@ const welcomeMessage = ref('Добро пожаловать в систему у
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 100px 100px;
+  gap: 3rem;
   margin-top: 2rem;
 }
 
 .feature-card {
   background: white;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
   padding: 2rem;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }

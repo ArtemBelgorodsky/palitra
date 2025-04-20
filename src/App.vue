@@ -10,6 +10,7 @@ import { RouterLink, RouterView } from 'vue-router';
       <RouterLink to="/waiter" class="nav-link">Обслуживание гостей</RouterLink>
       <RouterLink to="/kitchen" class="nav-link">Кухня</RouterLink>
       <RouterLink to="/stat" class="nav-link">Статистика</RouterLink>
+      <div class="nav-link">Отчетность</div>
     </nav>
   </header>
 
